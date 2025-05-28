@@ -134,7 +134,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Authentication settings
 LOGIN_URL = 'myapp:login'
 LOGIN_REDIRECT_URL = 'myapp:food_list'
-LOGOUT_REDIRECT_URL = 'myapp:login'
+LOGOUT_REDIRECT_URL = 'myapp:login'  # This ensures redirect after logout
 
 # Email backend (for password reset, etc.)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

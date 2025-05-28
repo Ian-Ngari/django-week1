@@ -29,9 +29,12 @@
                 <div class="flex items-center space-x-4">
                     {% if user.is_authenticated %}
                         <span class="text-white font-medium">Hello, {{ user.username }}</span>
-                        <a href="{% url 'myapp:logout' %}" class="text-white hover:text-blue-200 transition">
-                            <i class="fas fa-sign-out-alt"></i> Logout
-                        </a>
+                        <form action="{% url 'myapp:logout' %}" method="post" class="inline">
+                            {% csrf_token %}
+                            <button type="submit" class="text-white hover:text-blue-200 transition">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </button>
+                        </form>
                     {% else %}
                         <a href="{% url 'myapp:login' %}" class="text-white hover:text-blue-200 transition">
                             <i class="fas fa-sign-in-alt"></i> Login
