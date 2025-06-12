@@ -13,12 +13,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import dj_database_url
 
-import dj_database_url 
  
-DATABASES = { 
-   # the link here is the external link provided on postgresql web service db 
-   "default": dj_database_url.parse("postgresql://postgresql_ikmw_user:PmvfH5aGsEOgkHvlJ3OdW7LNJdIw1QwJ@dpg-d0rboc3uibrs73d39k00-a.oregon-postgres.render.com/postgresql_ikmw") 
-}
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -89,15 +85,19 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # }
 
 
-DATABASES = {
-    'default':{
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'calories', 
-        'USER': 'calo_user', 
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
-        'PORT': '5432'
-    }
+# DATABASES = {
+#     'default':{
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'calories', 
+#         'USER': 'calo_user', 
+#         'PASSWORD': '123456',
+#         'HOST': 'localhost',
+#         'PORT': '5432'
+#     }
+# }
+DATABASES = { 
+   # the link here is the external link provided on postgresql web service db 
+   "default": dj_database_url.parse("postgresql://postgresql_ikmw_user:PmvfH5aGsEOgkHvlJ3OdW7LNJdIw1QwJ@dpg-d0rboc3uibrs73d39k00-a.oregon-postgres.render.com/postgresql_ikmw") 
 }
 
 # Password validation

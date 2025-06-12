@@ -23,3 +23,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),  # Make sure there's no space in 'myapp.urls'
 ]
+urlpatterns += staticfiles_urlpatterns() 
